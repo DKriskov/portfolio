@@ -176,6 +176,11 @@ AppWidget = {
 
 		o.redScore.html(data.totalRed);
 		o.blueScore.html(data.totalBlue);
+    },
+
+    errorMessage: function() {
+    	var message = '<p class="battleValidation">Obje vojske moraju imati barem jednog vojnika u bitci</p>';
+    	$('#battleSubmit').after(message);
     }
 
 }
