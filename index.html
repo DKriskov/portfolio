@@ -145,18 +145,18 @@
 			<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
 		</ul>
 
-		<form id="myform" action="process.php">
+		<form id="startForm" action="process.php">
 			<div class="col-md-4 col-sm-4 army-balance">
 				<p>
-					<input id="proba" type="number" name='proba' placeholder="Unesi broj crvene vojske">
+					<input id="init-red-num" type="number" name="redArmy" placeholder="Unesi broj crvene vojske">
 				</p>
 			</div>
 			<div class="col-md-4 col-sm-4 army-balance prepered">
-				<input type="submit" class="btn btn-success" value="submit">
+				<button type="submit" class="btn btn-success">Kreni sa novom simulacijom</button>
 			</div>
 			<div class="col-md-4 col-sm-4 army-balance">
 				<p>
-					<input id='proba2' type="number" name="proba2" placeholder="Unesi broj plave vojske">
+					<input id="init-blue-num" type="number" name="blueArmy" placeholder="Unesi broj plave vojske">
 				</p>
 			</div>
 		</form>
@@ -226,15 +226,17 @@
         DataService.ajaxForm();
         AppWidget.init();
 
-        $( "#myform" ).validate({
-		  rules: {
-		    proba: {
-		      required: true,
-		      min: 1
-		    }
-		  }
-		});
-
+        $(document).ready(function(){
+        	$( "#startForm" ).validate({
+			  rules: {
+			    redArmy: {
+			      required: true,
+			      min: 1
+			    }
+			  }
+			});
+        });
+	        
     </script>
 </body>
 </html>
