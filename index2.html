@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Looking At Underscore.js Templates</title>
+</head>
+<body>
+ 
+    <h1>
+        Looking At Underscore.js Templates
+    </h1>
+    <button class="more-button" type="button" data-project="Vinodolopen">Click Me!</button>
+    <button class="more-button" type="button" data-project="Homedinner (beta)">Click Me!</button>
+    <script type="text/template" class="template">
+
+        <ul>
+            <% _.each( project, function( listItem ){ %>
+ 
+                <li>
+                    <p>Title: <%- listItem.title  %></p>
+                    <p>Link: <%- listItem.link  %></p>
+                    <p>Tags: 
+                    <% _.each( listItem.tags, function( tag ){ %>
+                         <%- tag+' ' %>
+                    <% }); %>
+                        
+                    </p>
+                </li>
+ 
+            <% }); %>
+        </ul>
+ 
+    </script>
+    <!-- END: Underscore Template Definition. -->
+
+    <!-- Include and run scripts. -->
+    <script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="js/ajaxModul.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript">
+
+        ProjectsWidget.init();
+ 
+    </script>
+</body>
+</html>

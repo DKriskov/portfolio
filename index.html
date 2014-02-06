@@ -1,0 +1,240 @@
+<!DOCTYPE>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header">
+	<div id="menu" class="cont">
+		<ul>
+			<li class="current_page_item"><a href="#" accesskey="1" title="" data-scroll="portfolio-wrapper" class="link">Projekti</a></li>
+			<li><a href="#" accesskey="1" title="" data-scroll="application" class="link">Aplikacija</a></li>
+			<li><a href="#" accesskey="2" title="" data-scroll="contact" class="link">Kontakt</a></li>
+		</ul>
+	</div>
+</div>
+<div id="logo" class="cont">
+	<div class="major">
+		<h2>O meni</h2>
+		<span class="byline">Phasellus nec erat sit amet nibh pellentesque congue</span>
+	</div>
+</div>
+<div id="portfolio-wrapper">
+	<div class="portfolio cont">
+		<div class="major">
+			<h2>Suspendisse lacus turpis</h2>
+			<span class="byline">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span>
+		</div>
+		<div class="column1">
+			<a href="http://vinodolopen.com/" class="image image-full"><img src="images/vinodolopen.png" height="300" alt="" /></a>
+			<button id="Vinodolopen" class="button more-button" data-project="Vinodolopen" clicked='no'>Read More</button>
+		</div>			
+		<div class="column2">
+			<a href="http://webcode.com.hr/projects/cooking/public/" class="image image-full"><img src="images/homedinner.png" height="300" alt="" /></a>
+			<button id="Homedinner" class="button more-button" data-project="Homedinner" clicked='no'>Read More</button>
+		</div>			
+		<div class="column3">
+			<a href="http://pcbaza.id-consulting.hr/" class="image image-full"><img src="images/baza.png" height="300" alt="" /></a>
+			<button id="Baza" class="button more-button" data-project="Baza" clicked='no'>Read More</button>
+		</div>			
+	</div>
+	<div class="portfolio cont">
+		<div class="column1">
+			<a href="http://boatexcursions.net/" class="image image-full"><img src="images/boat.png" height="300" alt="" /></a>
+			<button id="Boat" class="button more-button" data-project="Boat" clicked='no'>Read More</button>
+		</div>			
+		<div class="column2">
+			<a href="http://academytraininggym.com/" class="image image-full"><img src="images/academy.png" height="300" alt="" /></a>
+			<button id="Academy" class="button more-button" data-project="Academy" clicked='no'>Read More</button>
+		</div>
+	</div>
+</div>
+<div id="page" class="cont">
+	<div id="application">
+		<div class="title">
+			<h2>Objasni aplikaciju</h2>
+			<span class="byline">Mauris vulputate dolor sit amet nibh</span>
+		</div>
+		<p>This is <strong>TwoColours</strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attributions 3.0</a> license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :) </p>
+	</div>
+
+	<div class="row score-board">
+		<div class="col-md-4 col-sm-4 army-balance army-num">
+			<h3>Broj vojnika crvene vojske</h3>
+			<p id="red-score" class="btn btn-danger balance">0</p>
+		</div>
+		<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 army-balance army-num">
+			<h3>Broj vojnika plave vojske</h3>
+			<p id="blue-score" class="btn btn-primary balance blue-score">0</p>
+		</div>
+	</div>
+
+	<div id="sidebar" class="clearfix">
+		<form id="start-form" action="process.php" method="POST">
+			<div class="col-md-4 col-sm-4 army-balance">
+				<p>
+					<input id="init-red-num" type="number" required = "required" placeholder="Unesi broj crvene vojske">
+				</p>
+			</div>
+			<div class="col-md-4 col-sm-4 army-balance prepered">
+				<button type="submit" class="btn btn-success">Kreni sa novom simulacijom</button>
+			</div>
+			<div class="col-md-4 col-sm-4 army-balance">
+				<p>
+					<input id="init-blue-num" type="number" required = "required" placeholder="Unesi broj plave vojske">
+				</p>
+			</div>
+		</form>
+	</div>
+
+	<div id="battle-form-cont" class="row">
+		<form id="battle-form" action="process.php" method="POST">
+			<div class="col-md-4 col-sm-4 army-balance survivals-red">
+					<input id="battle-army-red" type="hidden" name="army1" value="0">
+				<p><input type="number" name="red_army_num" class="amount1"></p>
+				<div class="slider1"></div>
+				<p class="special-feature prepered">
+					<input type="radio" name="help" value="red" class="help-army">
+					<span class="glyphicon glyphicon-arrow-left"></span>
+				</p>
+			</div>
+			<div class="col-md-4 col-sm-4 army-balance">
+				<p><input type="submit" class="btn btn-success" id="battleSubmit" value="Odaberi broj vojnika za bitku"></p>
+				<a href="#" id="special-feature-trigger">Pogledaj specijalni dodatak</a>
+				<div class="special-feature prepered">
+					<p>Iskoristi mogućnost pomoći jednoj od dvije vojske u sljedećoj bitci u obliku karizmatičnog vođe</p>
+					<img src="css/images/ajmo.jpg" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 army-balance survivals-blue">
+				<input id="battle-army-blue" type="hidden" name="army2" value="0">
+				<p><input type="number" name="blue_army_num" class="amount2"></p>
+				<div class="slider2"></div>
+				<p class="special-feature prepered">
+					<span class="glyphicon glyphicon-arrow-right"></span>
+					<input type="radio" name="help" value="blue" class="help-army">
+				</p>
+			</div>
+		</form>
+	</div>
+
+</div>
+<div id="contact" class="cont">
+		<div class="major">
+			<h2>Kontakt</h2>
+			<span class="byline">Phasellus nec erat sit amet nibh pellentesque congue</span>
+		</div>
+		<ul class="contact">
+			<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+			<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+			<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+			<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+			<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+		</ul>
+
+		<form id="myform" action="process.php">
+			<div class="col-md-4 col-sm-4 army-balance">
+				<p>
+					<input id="proba" type="number" name='proba' placeholder="Unesi broj crvene vojske">
+				</p>
+			</div>
+			<div class="col-md-4 col-sm-4 army-balance prepered">
+				<input type="submit" class="btn btn-success" value="submit">
+			</div>
+			<div class="col-md-4 col-sm-4 army-balance">
+				<p>
+					<input id='proba2' type="number" name="proba2" placeholder="Unesi broj plave vojske">
+				</p>
+			</div>
+		</form>
+</div>
+<div id="copyright" class="cont">
+	<p>Copyright (c) 2013 Sitename.com. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+<div id="toTop">Back to Top</div>
+
+	<script type="text/template" class="template">
+
+        <div class="project-data">
+            <% _.each( project, function( listItem ){ %>
+                    <p><strong>Title:</strong> <a href="<%- listItem.link  %>"><%- listItem.title  %></a></p>
+                    <p><strong>Description:</strong> <%- listItem.description  %></p>
+                    <p><strong>Tags:</strong> <%- listItem.tags.join(', ') %></p>
+                    <p><strong>Github:</strong> <a href="<%- listItem.github  %>"><%- listItem.github  %></a></p>
+            <% }); %>
+        </div>
+ 
+    </script>
+
+    <script type="text/template" class="template-survivals">
+
+    	<div class="prepered survivals-message">
+    		<p>Broj prezivjelih vojnika <%- army %> vojske u <%- battleNum %>. bitci</p>
+    		<p class="btn btn-warning balance"><%- survivals %></p></div>
+    	</div>
+
+    </script>
+
+    <script type="text/template" class="template-finish">
+    	<div class="final-message">
+	    	<h1>Rat je zavrsio</h1>
+	    	<h3 class="prepered btn btn-<%- button %>">Pobijedila je <%- army %> vojska</h3>
+	    	<h3 class="prepered">Broj preživjelih vojnika je: <%- survival %></h3>
+	    </div>
+		<div class="row prepered total-score">
+				<div class="col-md-4 col-sm-4 army-balance">
+					<p class="btn btn-danger balance"><%- h2h.totalRedWins %></p>
+				</div>
+				<div class="col-md-4 col-sm-4 army-balance">
+					<h3>Ukupan rezultat</h3>
+				</div>
+				<div class="col-md-4 col-sm-4 col-sm-offset-4 army-balance">
+					<p class="btn btn-primary balance blue-score"><%- h2h.totalBlueWins %></p>
+				</div>
+			</div>
+    </script>
+
+	<script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/jquery.form.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="lib/jquery.validate.js"></script>
+
+    <script type="text/javascript" src="js/ajaxModul.js"></script>
+    <script type="text/javascript" src="js/projects.js"></script>
+    <script type="text/javascript" src="js/scrollinPage.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript">
+
+        ProjectsWidget.init();
+        ScrollinPage.init();
+        DataService.ajaxForm();
+        AppWidget.init();
+
+        $( "#myform" ).validate({
+		  rules: {
+		    proba: {
+		      required: true,
+		      min: 1
+		    }
+		  }
+		});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{ 
+    "title": "My projects",
+    "projects": [
+    { 
+        "id": "Vinodolopen",
+        "title": "Vinodolopen",
+        "tags": [
+            "PHP","Laravel", "jQuery", "AJAX", "FB-api"
+        ],
+        "link": "http://vinodolopen.com",
+        "github": "https://github.com/DKriskov/vinodolopen",
+        "description": "Web aplikacija za praćenje rezultata amaterskog teniskog kluba. Ova aplikacija omogućuje integraciju podataka s facebook profila korisnika, koji se koriste za prijavu i registraciju korisnika. Za razvoj aplikacije korišten je PHP framework Laravel. Aplikacija nudi CMS sustav za administratora, te obuhvaća algoritme za rangiranje igrača na ljestvici, prikaz rezultata, sustav prijave na trunire i automatsko generiranje ždrijeba turnira."
+    },
+    {
+        "id": "Homedinner",
+        "title": "Homedinner (beta)",
+        "tags": [
+            "PHP","Laravel", "jQuery", "AJAX", "FB-api", "Paypal"
+        ],
+        "link": "http://webcode.com.hr/projects/cooking/public/",
+        "github": "https://github.com/DKriskov/HomeDinner",
+        "description": "Web aplikacija koja omogućuje online bookiranje večera koje organiziraju korisnici. Korisnici su u mogućnosti izraditi listu pića i njihovu cijenu koja će se nalaziti u ponudi. Za rezervaciju su potrebni bonovi čija je kupnja omogućena preko Paypal-a. Admin sučelje korisnika nudi pregled zarade, troškova te popis gostiju za večeru koju on organizira."
+    },
+    {
+        "id": "Baza",
+        "title": "Baza poduzetnika",
+        "tags": [
+            "PHP", "Laravel", "jQuery", "AJAX"
+        ],
+        "link": "http://pcbaza.id-consulting.hr/",
+        "github": "-",
+        "description": "Pretraživač baze poduzetnika s admin sučeljem za uređivanjem, dodavanjem i brisanje subjekata (CRUD). Rezultati se rangiraju na način da premium korisnici dolaze na vrh."
+    },
+    {
+        "id": "Boat",
+        "title": "Boat excursions",
+        "tags": [
+            "CMS", "Wordpress"
+        ],
+        "link": "http://boatexcursions.net/",
+        "github": "-",
+        "description": "Jednostavna wordpress stranica s prilagođenim dizajnom"
+    },
+    {
+        "id": "Academy",
+        "title": "Academy training gym",
+        "tags": [
+            "Photoshop", "CMS", "Wordpress" 
+        ],
+        "link": "http://academytraininggym.com/",
+        "github": "-",
+        "description": "Jednostavna wordpress stranica s vlastitim dizajnom"
+    }
+]}
