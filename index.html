@@ -83,10 +83,10 @@
 	</div>
 
 	<div id="sidebar" class="clearfix">
-		<form id="start-form" action="process.php" method="POST">
+		<form id="startForm" action="process.php">
 			<div class="col-md-4 col-sm-4 army-balance">
 				<p>
-					<input id="init-red-num" type="number" required = "required" placeholder="Unesi broj crvene vojske">
+					<input id="init-red-num" type="number" name="redArmy" placeholder="Unesi broj crvene vojske">
 				</p>
 			</div>
 			<div class="col-md-4 col-sm-4 army-balance prepered">
@@ -94,7 +94,7 @@
 			</div>
 			<div class="col-md-4 col-sm-4 army-balance">
 				<p>
-					<input id="init-blue-num" type="number" required = "required" placeholder="Unesi broj plave vojske">
+					<input id="init-blue-num" type="number" name="blueArmy" placeholder="Unesi broj plave vojske">
 				</p>
 			</div>
 		</form>
@@ -144,22 +144,6 @@
 			<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
 			<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
 		</ul>
-
-		<form id="startForm" action="process.php">
-			<div class="col-md-4 col-sm-4 army-balance">
-				<p>
-					<input id="init-red-num" type="number" name="redArmy" placeholder="Unesi broj crvene vojske">
-				</p>
-			</div>
-			<div class="col-md-4 col-sm-4 army-balance prepered">
-				<button type="submit" class="btn btn-success">Kreni sa novom simulacijom</button>
-			</div>
-			<div class="col-md-4 col-sm-4 army-balance">
-				<p>
-					<input id="init-blue-num" type="number" name="blueArmy" placeholder="Unesi broj plave vojske">
-				</p>
-			</div>
-		</form>
 </div>
 <div id="copyright" class="cont">
 	<p>Copyright (c) 2013 Sitename.com. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
@@ -226,17 +210,6 @@
         DataService.ajaxForm();
         AppWidget.init();
 
-        $(document).ready(function(){
-        	$( "#startForm" ).validate({
-			  rules: {
-			    redArmy: {
-			      required: true,
-			      min: 1
-			    }
-			  }
-			});
-        });
-	        
     </script>
 </body>
 </html>

@@ -30,14 +30,27 @@ AppWidget = {
 		o = this.settings;
 		this.toggleFeature();
 
-	    $( "#start-form" ).submit(function(event) {
-		  	event.preventDefault();
-
-		  	o.redMax = $('#init-red-num').val();
+		$( "#startForm" ).validate({
+    	  submitHandler: function() { 
+    	  	o.redMax = $('#init-red-num').val();
 		  	o.blueMax = $('#init-blue-num').val();
 
 		  	AppWidget.sliderInit();
 		  	AppWidget.warInit();
+    	  	return false;
+    	  },
+		  rules: {
+		    redArmy: {
+		    	required: true,
+		    	number: true,
+		        min: 1
+		    },
+		    blueArmy: {
+		    	required: true,
+		    	number: true,
+		        min: 1
+		    }
+		  }
 		});
 
 		$('.survivals-message').remove();
@@ -86,7 +99,7 @@ AppWidget = {
 		o.redNumInput.val(0);
 		o.blueNumInput.val(0);
 
-		$('#start-form').parent().hide();
+		$('#startForm').parent().hide();
 		$('#battle-form-cont').show();
 
 		$('.final-message').remove();
@@ -118,7 +131,7 @@ AppWidget = {
 				};
 			}
 			$('#battle-form').hide();
-			$('#start-form').parent().show();
+			$('#startForm').parent().show();
 			$('#init-red-num').val(0);
 			$('#init-blue-num').val(0);
 			$('#battle-form-cont').prepend(o.templateFinish(winArmy));
