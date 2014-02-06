@@ -144,22 +144,6 @@
 			<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
 			<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
 		</ul>
-
-		<form id="myform" action="process.php">
-			<div class="col-md-4 col-sm-4 army-balance">
-				<p>
-					<input id="proba" type="number" name='proba' placeholder="Unesi broj crvene vojske">
-				</p>
-			</div>
-			<div class="col-md-4 col-sm-4 army-balance prepered">
-				<input type="submit" class="btn btn-success" value="submit">
-			</div>
-			<div class="col-md-4 col-sm-4 army-balance">
-				<p>
-					<input id='proba2' type="number" name="proba2" placeholder="Unesi broj plave vojske">
-				</p>
-			</div>
-		</form>
 </div>
 <div id="copyright" class="cont">
 	<p>Copyright (c) 2013 Sitename.com. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
@@ -225,15 +209,6 @@
         ScrollinPage.init();
         DataService.ajaxForm();
         AppWidget.init();
-
-        $( "#myform" ).validate({
-		  rules: {
-		    proba: {
-		      required: true,
-		      min: 1
-		    }
-		  }
-		});
 
     </script>
 </body>
