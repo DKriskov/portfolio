@@ -83,10 +83,10 @@
 	</div>
 
 	<div id="sidebar" class="clearfix">
-		<form id="start-form" action="process.php" method="POST">
+		<form id="startForm" action="process.php">
 			<div class="col-md-4 col-sm-4 army-balance">
 				<p>
-					<input id="init-red-num" type="number" required = "required" placeholder="Unesi broj crvene vojske">
+					<input id="init-red-num" type="number" name="redArmy" placeholder="Unesi broj crvene vojske">
 				</p>
 			</div>
 			<div class="col-md-4 col-sm-4 army-balance prepered">
@@ -94,7 +94,7 @@
 			</div>
 			<div class="col-md-4 col-sm-4 army-balance">
 				<p>
-					<input id="init-blue-num" type="number" required = "required" placeholder="Unesi broj plave vojske">
+					<input id="init-blue-num" type="number" name="blueArmy" placeholder="Unesi broj plave vojske">
 				</p>
 			</div>
 		</form>

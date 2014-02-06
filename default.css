@@ -581,3 +581,5 @@ html[xmlns] .clearfix {
 .intro a {display: block;}
 .intro p {display: none;}
 .army-num {padding: 0 0 15px 0; border-radius: 5px; border: solid 2px;}
+
+.battleValidation {color: red;}
